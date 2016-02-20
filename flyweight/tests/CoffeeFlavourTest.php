@@ -13,6 +13,7 @@ class CoffeeFlavourTests extends \PHPUnit_Framework_TestCase
     {
         $this->expectOutputString('Cappuccino');
         $coffee = new CoffeeFlavour('Cappuccino');
+        
         echo $coffee;
     }
 }
