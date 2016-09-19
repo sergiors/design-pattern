@@ -22,6 +22,7 @@ class CoffeeShop
     {
         $flavour = $this->menu->lookup($flavourName);
         $order = new Order($table, $flavour);
+        
         $this->orders->attach($order);
     }
 

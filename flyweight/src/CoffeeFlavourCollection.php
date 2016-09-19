@@ -30,7 +30,7 @@ class CoffeeFlavourCollection implements \ArrayAccess, \Countable
     public function offsetSet($offset, $value)
     {
         if (!$value instanceof CoffeeFlavour) {
-            throw new \UnexpectedValueException();
+            throw new \InvalidArgumentException();
         }
         
         $this->flavours[$offset] = $value;

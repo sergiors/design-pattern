@@ -12,8 +12,6 @@ class OrderTest extends \PHPUnit_Framework_TestCase
      */
     public function shouldPrintOrder()
     {
-        $this->expectOutputString('Serving Espresso to table 1');
-
         $coffee = $this->getMockBuilder(CoffeeFlavour::class)
             ->disableOriginalConstructor()
             ->getMock();
@@ -24,6 +22,6 @@ class OrderTest extends \PHPUnit_Framework_TestCase
 
         $order = new Order(1, $coffee);
 
-        echo $order->serve();
+        $this->assertEquals('Serving Espresso to table 1', $order->serve());
     }
 }
